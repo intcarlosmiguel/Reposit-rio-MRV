@@ -1,0 +1,23 @@
+h1{
+    font-family: 'Arvo', serif;
+}
+p{
+    font-family: 'Poiret One', cursive;
+}
+.principal{
+    width: 75vw;
+    height: 75vh;
+    margin: auto;
+    background-color: red;
+}
+.regras, .over{
+    display: block;
+    width: 38vw;
+    height: 38vh;
+    margin: auto;
+    text-align: center;
+    background-color: khaki;
+}
+.over{
+    display: none;
+}
