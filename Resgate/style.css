@@ -1,23 +1,87 @@
-h1{
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("militar.jpg");
+}
+h1,p{
     font-family: 'Arvo', serif;
+    color: #55271d;
 }
 p{
     font-family: 'Poiret One', cursive;
 }
+button{
+    margin-top: 5vw;
+    font-family: 'Arvo', serif;
+    min-width: 8vw;
+    min-height: 8vh;
+    cursor: pointer;
+    border-color: brown;
+    border-radius: 15%;
+}
+hr{
+    margin: auto;
+    width:28vw;
+    height:2px;
+    border-width:0;
+    color:#55271d;
+    background-color:#55271d;
+}
 .principal{
+    transform: translateY(12.5vh);  
     width: 75vw;
     height: 75vh;
     margin: auto;
-    background-color: red;
+    overflow: hidden;
+    display: flex;
+    background-image: url('forest.png');
 }
-.regras, .over{
-    display: block;
+.container{
+    justify-content: center;
+    display: flex;
     width: 38vw;
     height: 38vh;
     margin: auto;
+    overflow: hidden;
+}
+.regras, .over{
+    overflow: auto;
+    width: 40vw;
+    height: 40vh;
     text-align: center;
+    flex: 1;
     background-color: khaki;
 }
 .over{
     display: none;
+}
+#resgate, #enemy_h{
+    display: none;
+    width: 350px;
+    height: 172px;
+    position: absolute;
+}
+#carro{
+    display: block;
+    position: absolute;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+#enemy_h{
+    left: 75vw;
+    display: block;
+}
+#explosion{
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+#bullet{
+    position: absolute;
+    display: none;
+    width: 4vw;
+    height: 4vh;
 }
