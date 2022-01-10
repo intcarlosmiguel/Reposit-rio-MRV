@@ -9,7 +9,18 @@ var px = 20
 var w
 var bullet
 var exist = 0
-var boo = 0
+var tmp
+function iniciaResgate(){
+    let algo = document.createElement('img')
+    algo.id = 'resgate'
+    algo.src = './img/h1.gif'
+    algo.style.height = template.convertH(172) + 'vh'
+    algo.style.width = template.convertW(350) + 'vh'
+    algo.style.top = 0 + 'vh'
+    algo.style.left = 0 + 'vh'
+    document.getElementsByClassName('principal')[0].appendChild(algo);
+    obj = document.getElementById('resgate')
+}
 function tiro(){
     if(px<75){
         px += 1
@@ -51,7 +62,7 @@ function KD(){
             if(px==20){
                 let btn = document.createElement("img");
                 btn.id = "bullet"
-                btn.src = "bullet.png"
+                btn.src = "./img/bullet.png"
                 document.getElementsByClassName('principal')[0].appendChild(btn);
                 bullet = document.getElementById('bullet')
                 bullet.style.display = 'block'
@@ -105,13 +116,11 @@ function movimento(){
     rot = 0
     w = 1
     deg = 0
-    let tempo = setInterval(function(){
-        boo = template.createAlgo('resgate','h1.gif',350,172,0,boo,tempo)
-    },0)
-    
-    obj = document.getElementById('resgate')
+    //boo = template.createAlgo('resgate','h1.gif',172,350,0,0,boo,tempo)
+    clearTimeout(tmp);
+    iniciaResgate()
     document.addEventListener('keydown',KD)
     document.addEventListener('keyup',KU)
-    let tmp = setInterval(adiciona,20)
+    tmp = setInterval(adiciona,20)
 }
 export default {movimento,exist}

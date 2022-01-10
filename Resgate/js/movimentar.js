@@ -4,7 +4,7 @@ function convertH(px) {
 function convertW(px) {
 	return px * (100 / document.documentElement.clientHeight);
 }
-function createAlgo(algoId,algoSrc,algoX,algoY,algoTop,cont,time){
+function createAlgo(algoId,algoSrc,algoX,algoY,algoTop,algoLeft,cont,time){
     if(cont==0){
         let algo = document.createElement('img')
         algo.id = algoId
@@ -12,6 +12,7 @@ function createAlgo(algoId,algoSrc,algoX,algoY,algoTop,cont,time){
         algo.style.height = convertH(algoX) + 'vh'
         algo.style.width = convertW(algoY) + 'vh'
         algo.style.top = algoTop + 'vh'
+        algo.style.left = algoLeft + 'vh'
         document.getElementsByClassName('principal')[0].appendChild(algo);
         clearTimeout(time);
         cont = 1

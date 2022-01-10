@@ -1,11 +1,12 @@
 *{
     padding: 0;
     margin: 0;
+    z-index: 1;
 }
 body{
-    background-image: url("militar.jpg");
+    background-image: url("./img/militar.jpg");
 }
-h1,p{
+h1,h2,p{
     font-family: 'Arvo', serif;
     color: #55271d;
 }
@@ -36,7 +37,7 @@ hr{
     margin: auto;
     overflow: hidden;
     display: flex;
-    background-image: url('forest.png');
+    background-image: url('./img/forest.png');
 }
 .container{
     justify-content: center;
@@ -57,31 +58,33 @@ hr{
 .over{
     display: none;
 }
-#resgate, #enemy_h{
+.heart{
     display: none;
-    width: 350px;
-    height: 172px;
     position: absolute;
+    top: 36vw;
+    left: 0px;
+    z-index: 3;
 }
-#carro{
+#resgate, #enemy_h,#carro,#explosion,#bullet,#militar{
     display: block;
     position: absolute;
+    z-index: 0;
+}
+#carro,#militar{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 #enemy_h{
     left: 75vw;
-    display: block;
+}
+#carro{
+    left: 75vh;
 }
 #explosion{
-    display: block;
     width: 200px;
     height: 200px;
-    position: absolute;
 }
 #bullet{
-    position: absolute;
-    display: none;
     width: 4vw;
     height: 4vh;
 }

@@ -18,6 +18,7 @@ function add(){
     valor = document.getElementsByClassName("texto")[0].value;
     number = document.querySelectorAll("label").length;
     if(valor != ""){
+        document.getElementById('texto').value = ''
         var label = document.createElement("label");
         label.innerHTML = valor;
         var check = document.createElement("input");
